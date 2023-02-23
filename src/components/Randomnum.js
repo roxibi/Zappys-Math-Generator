@@ -46,6 +46,7 @@ const Randomnum = () => {
                         <div className='grid-item'>{x}=</div>
                     ))}
                 </div>
+                <p>© Zappys by Diana & Roxana Bita, 2023</p>
             </div>
             <button onClick={createPDF} type='button'>
                 Download
