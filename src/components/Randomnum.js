@@ -8,7 +8,7 @@ const Randomnum = () => {
         const pdf = new jsPDF("portrait", "pt", "a4");
         const data = await document.querySelector("#pdf");
         pdf.html(data).then(() => {
-          pdf.save("shipping_label.pdf");
+          pdf.save(`Zappys.pdf`);
         });
       };
 
@@ -32,8 +32,7 @@ const Randomnum = () => {
     useEffect(() => {
         nums();
     }, []);
-    // const generate =(num1, num2, sign)=>{
-    //=>{arr.push}
+ 
     return (
         <div id="pdf">
              <button onClick={createPDF} type="button">Download</button>
@@ -50,20 +49,6 @@ const Randomnum = () => {
     );
 };
 
-// }
 
-// function getRandomIntInclusive(min, max) {
-//     min = Math.ceil(min);
-//     max = Math.floor(max);
-//     return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
-//   }
-// const size = max - min;
-// const startAt = min;
-// const range = (size, startAt) => {
-//     return [...Array(size).keys()].map((i) => i + startAt);
-// };
-// console.log(size)
-// console.log(startAt)
-// console.log(sign)
 
 export default Randomnum;
