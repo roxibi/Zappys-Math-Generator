@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+
+import React, {useState} from 'react';
+import Randomnum from './components/Randomnum';
 import './App.css';
 
-function App() {
+function App (){
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       {/* <button placeholder='Set first number' type='number' onClick={nums}>generate two numbers</button>
+               
+               <select onChange={(e) => setSign(e.target.value)}>
+                   <option value='+'>+</option>
+                   <option value='*'>*</option>
+                 
+               </select> */}
+     <Randomnum />
+    
     </div>
   );
 }
