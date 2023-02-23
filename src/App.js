@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react';
+import React from 'react';
 import Randomnum from './components/Randomnum';
 import './App.css';
 
