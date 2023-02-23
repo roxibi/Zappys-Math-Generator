@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { jsPDF } from "jspdf";
 import "../App.css";
 
 const Randomnum = () => {
     const [arr, setArr] = useState([]);
+    const createPDF = async () => {
+        const pdf = new jsPDF("portrait", "pt", "a4");
+        const data = await document.querySelector("#pdf");
+        pdf.html(data).then(() => {
+          pdf.save("shipping_label.pdf");
+        });
+      };
 
     const nums = () => {
         let tempArray = [];
@@ -27,7 +35,8 @@ const Randomnum = () => {
     // const generate =(num1, num2, sign)=>{
     //=>{arr.push}
     return (
-        <div>
+        <div id="pdf">
+             <button onClick={createPDF} type="button">Download</button>
             {" "}
             <h1>Zappys - generate Math Exercises</h1>
             <p>Refresh the page to generate new exercises!</p>
@@ -36,6 +45,7 @@ const Randomnum = () => {
                     <div className="grid-item">{x}=</div>
                 ))}
             </div>
+           
         </div>
     );
 };
