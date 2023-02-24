@@ -41,11 +41,12 @@ const Randomnum = () => {
 
     return (
         <div>
+            
+            <header>
             <div className='img'>
                 <img className='logo' src={Logo} alt='Zappys Logo' />{" "}
             </div>
-            <header>
-                <h1>Math worksheets generator</h1>
+                <h1>MATH WORKSHEETS GENERATOR</h1>
                 <div className="sign-line">
                 <p>Select the operation</p>
                 <select onChange={(e) => setSign(e.target.value)}>
