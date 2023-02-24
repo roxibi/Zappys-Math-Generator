@@ -41,7 +41,7 @@ const Randomnum = () => {
              <img className="logo" src={Logo}/> </div>
             <header>
                
-                <h1>Zappys - generate Math Exercises</h1>
+                <h1>Math worksheets generator</h1>
                 <p>Refresh the page to generate new exercises!</p>
             </header>
             <div id='pdf'>
