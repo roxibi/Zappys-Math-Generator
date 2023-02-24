@@ -5,14 +5,14 @@ html {
 
 body {
     background-color: whitesmoke;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
     position: relative;
     width: 50%;
 }
 
 header{
-padding: 1rem;
+
 width: 90%;
 margin: auto;
 }
@@ -97,6 +97,18 @@ button {
 button:hover {
     background-color: #00cc99;
 }
+
+.copyright{
+  font-size: 0.7rem;
+}
+
+.logo{
+height: 6rem;
+padding-bottom: 0;
+position: absolute;
+left:3rem;
+}
+
 
 @keyframes App-logo-spin {
     from {
