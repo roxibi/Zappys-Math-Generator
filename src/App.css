@@ -11,17 +11,16 @@ body {
     width: 50%;
 }
 
-header{
-
-width: 90%;
-margin: auto;
+header {
+    width: 90%;
+    margin: auto;
 }
 
-h1{
-  margin: 0;
-  padding: 1rem;
-  font-size: 1.4rem;
-  padding-top: 5rem;
+h1 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.4rem;
+    padding-top: 5rem;
 }
 .App {
     text-align: center;
@@ -70,10 +69,11 @@ h1{
 }
 
 button {
-  background-color: #00cc99;
-  color: antiquewhite;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- 
+    background-color: #00cc99;
+    color: antiquewhite;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+
     border-radius: 15px;
     width: calc(30% - 8px);
     width: -o-calc(30% - 8px);
@@ -83,7 +83,7 @@ button {
     height: auto;
     padding: 10px 0px 10px 0px;
     margin: 1rem auto;
-   border: none;
+    border: none;
     cursor: pointer;
 
     font-family: "Helvetica";
@@ -106,15 +106,23 @@ button:hover {
     border: 3px solid #00cc99;
 }
 
-.copyright{
-  font-size: 0.7rem;
+.copyright {
+    font-size: 0.7rem;
 }
 
-.logo{
-height: 6rem;
-padding-bottom: 0;
-position: absolute;
-left:3rem;
+.logo {
+    height: 6rem;
+    padding-bottom: 0;
+    position: absolute;
+    left: 3rem;
+}
+
+
+select:focus {
+    border-color: #00cc99;
+}
+select option:hover {
+    background-color: #00cc99;
 }
 
 
