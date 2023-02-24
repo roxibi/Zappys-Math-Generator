@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { jsPDF } from "jspdf";
 import "../App.css";
+import Logo from '../assets/Zappys-green.png'
 
 const Randomnum = () => {
     const [arr, setArr] = useState([]);
@@ -36,8 +37,11 @@ const Randomnum = () => {
 
     return (
         <div>
+            <div className="img">
+             <img className="logo" src={Logo}/> </div>
             <header>
-                <h1>Zappys - generate Math Exercises</h1>
+               
+                <h1>Math worksheets generator</h1>
                 <p>Refresh the page to generate new exercises!</p>
             </header>
             <div id='pdf'>
@@ -46,6 +50,7 @@ const Randomnum = () => {
                         <div className='grid-item'>{x}=</div>
                     ))}
                 </div>
+                <p className="copyright">© Zappys by Diana & <a href='https://roxana-bita-webdev.netlify.app/en'>Roxana Bita</a>, 2023</p>
             </div>
             <button onClick={createPDF} type='button'>
                 Download
