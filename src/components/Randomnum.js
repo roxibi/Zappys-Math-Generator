@@ -46,7 +46,7 @@ const Randomnum = () => {
                         <div className='grid-item'>{x}=</div>
                     ))}
                 </div>
-                <p>© Zappys by Diana & Roxana Bita, 2023</p>
+                <p>© Zappys by Diana & <a href='https://roxana-bita-webdev.netlify.app/en'>Roxana Bita</a>, 2023</p>
             </div>
             <button onClick={createPDF} type='button'>
                 Download
