@@ -5,6 +5,12 @@ import Logo from '../assets/Zappys-green.png'
 
 const Randomnum = () => {
     const [arr, setArr] = useState([]);
+    const [sign, setSign] = useState('*');
+  
+  
+    const options =['*', '+', '-', '÷']
+
+
 
     const createPDF = async () => {
         const pdf = new jsPDF("portrait", "pt", "a4");
@@ -16,7 +22,7 @@ const Randomnum = () => {
 
     const nums = () => {
         let tempArray = [];
-        const sign = "*";
+      
         let num1;
         let num2;
         while (tempArray.length < 60) {
@@ -33,16 +39,19 @@ const Randomnum = () => {
     console.log(arr);
     useEffect(() => {
         nums();
-    }, []);
+    }, [sign]);
 
     return (
         <div>
             <div className="img">
-             <img className="logo" src={Logo}/> </div>
+             <img className="logo" src={Logo} alt='Zappys Logo'/> </div>
             <header>
                
                 <h1>Math worksheets generator</h1>
                 <p>Refresh the page to generate new exercises!</p>
+                <select onChange={(e)=>setSign(e.target.value)}>
+                   {options.map((o, index)=>{return <option key={index} value={o}>{o} </option>})}
+                </select>
             </header>
             <div id='pdf'>
                 <div className='grid-exercises'>
