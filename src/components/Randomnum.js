@@ -10,11 +10,15 @@ const Randomnum = () => {
     const options = ["*", "+", "-", "÷"];
 
     const createPDF = async () => {
-        const pdf = new jsPDF("portrait", "pt", "a4");
+        const pdf = new jsPDF({
+            orientation: 'p',
+            unit: 'pt',
+            format: 'a4'});
         const data = await document.querySelector("#pdf");
-        pdf.html(data).then(() => {
+        pdf.html(data, {x:50}).then(() => {
             pdf.save(`Zappys.pdf`);
         });
+      
     };
 
     const nums = () => {
@@ -23,40 +27,41 @@ const Randomnum = () => {
         let num1;
         let num2;
         while (tempArray.length < 100) {
-            num1 = Math.ceil((Math.random() * 10) + 1);
-            num2 = Math.ceil((Math.random() * 10) + 1);
+            num1 = Math.ceil(Math.random() * 10 + 1);
+            num2 = Math.ceil(Math.random() * 10 + 1);
 
-            if (!tempArray.includes(num1 + sign + num2) ) {
+            if (!tempArray.includes(num1 + sign + num2)) {
                 tempArray.push(num1 + sign + num2);
             }
-            console.log(tempArray.length);
+            // console.log(tempArray.length);
         }
         setArr(tempArray);
     };
-    console.log(arr);
+    // console.log(arr);
     useEffect(() => {
         nums();
         // eslint-disable-next-line
     }, [sign]);
 
     return (
-        <div className="page">
+        <div className='page'>
             <div className='img'>
                 <img className='logo' src={Logo} alt='Zappys Logo' />{" "}
             </div>
             <header>
                 <h1>Math worksheets generator</h1>
-                <div className="sign-line">
-                <p>Select the operation</p>
-                <select onChange={(e) => setSign(e.target.value)}>
-                    {options.map((o, index) => {
-                        return (
-                            <option key={index} value={o}>
-                                {o}{" "}
-                            </option>
-                        );
-                    })}
-                </select></div>
+                <div className='sign-line'>
+                    <p>Select the operation</p>
+                    <select onChange={(e) => setSign(e.target.value)}>
+                        {options.map((o, index) => {
+                            return (
+                                <option key={index} value={o}>
+                                    {o}{" "}
+                                </option>
+                            );
+                        })}
+                    </select>
+                </div>
             </header>
             <div id='pdf'>
                 <h2>Zappys</h2>
