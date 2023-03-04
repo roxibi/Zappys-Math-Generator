@@ -22,11 +22,11 @@ const Randomnum = () => {
 
         let num1;
         let num2;
-        while (tempArray.length < 60) {
-            num1 = Math.ceil(Math.random() * 12);
-            num2 = Math.ceil(Math.random() * 12);
+        while (tempArray.length < 100) {
+            num1 = Math.ceil((Math.random() * 10) + 1);
+            num2 = Math.ceil((Math.random() * 10) + 1);
 
-            if (!tempArray.includes(num1 + sign + num2)) {
+            if (!tempArray.includes(num1 + sign + num2) ) {
                 tempArray.push(num1 + sign + num2);
             }
             console.log(tempArray.length);
@@ -40,7 +40,7 @@ const Randomnum = () => {
     }, [sign]);
 
     return (
-        <div>
+        <div className="page">
             <div className='img'>
                 <img className='logo' src={Logo} alt='Zappys Logo' />{" "}
             </div>
@@ -59,6 +59,7 @@ const Randomnum = () => {
                 </select></div>
             </header>
             <div id='pdf'>
+                <h2>Zappys</h2>
                 <div className='grid-exercises'>
                     {arr.map((x) => (
                         <div className='grid-item'>{x}=</div>
